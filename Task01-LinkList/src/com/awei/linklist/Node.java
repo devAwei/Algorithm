@@ -1,4 +1,4 @@
-package com.awei.task;
+package com.awei.linklist;
 
 /**
  * @Description: 结点

@@ -1,14 +1,13 @@
-package com.awei.mian;
-
-import com.awei.task.LinkList;
+package com.awei.linklist;
 
 /**
  * @Description: main function
  * @Author: Awei
- * @Create: 2021-03-19 10:31
+ * @Create: 2021-03-19 14:29
  **/
 public class Main {
     public static void main(String[] args) {
+        //链表
         LinkList<String> linkList = new LinkList<>();
         String[] strs = new String[10];
 
@@ -19,6 +18,5 @@ public class Main {
         linkList.remove(4);
 
         linkList.output();
-
     }
 }
