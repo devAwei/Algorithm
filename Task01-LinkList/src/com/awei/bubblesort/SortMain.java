@@ -40,6 +40,7 @@ public class SortMain {
 
     private static int[] cockTailSort(int[] arr) {
         int temp = 0;
+        //奇数轮，从前往后
         for (int i = 0; i < arr.length / 2; i++) {
             boolean isSorted = true;
             for (int j = i; j < arr.length - i - 1; j++) {
@@ -51,7 +52,10 @@ public class SortMain {
                 }
             }
             if (isSorted) break;
+
+            //偶数轮之前，重新设置是否有序
             isSorted = true;
+            //偶数论，从后往前
             for (int j = arr.length - i - 1; j > i; j--) {
                 if (arr[j] < arr[j - 1]) {
                     temp = arr[j];
