@@ -1,3 +1,5 @@
+package 双边循环法;
+
 import java.util.Arrays;
 
 /**
@@ -19,23 +21,27 @@ public class Main {
     }
 
     private static void quickSort(int[] arr, int start, int end) {
-        if(start>=end) return;
+        if (start >= end) {
+            return;
+        }
         int pivot = patition(arr, start, end);
         quickSort(arr, start, pivot - 1);
         quickSort(arr, pivot + 1, end);
     }
 
     private static int patition(int[] arr, int start, int end) {
-        int left = start;
-        int right = end;
+        int left = start, right = end;
         int pivot = arr[start];
         while (left != right) {
-            while (left<right&&arr[right]>pivot)
+            while (left < right && arr[right] > pivot) {
                 right--;
-            while (left<right&&arr[left]<=pivot)
+            }
+            while (left < right && arr[left] <= pivot) {
                 left++;
-            if(left<right)
+            }
+            if (left < right) {
                 swap(arr, left, right);
+            }
         }
         arr[start] = arr[left];
         arr[left] = pivot;
