@@ -1,19 +1,21 @@
-package com.awei.bubblesort;
-
 import java.util.Arrays;
 
 /**
  * @Description: 冒泡排序
  * @Author: Awei
- * @Create: 2021-03-20 12:38
+ * @Create: 2021-04-19 19:35
  **/
-public class SortMain {
+public class Main {
     public static void main(String[] args) {
-        int[] arr = new int[]{5, 8, 6, 3, 9, 2, 1, 7};
-        System.out.println(Arrays.toString(bubbleSort(arr)));
-        int[] array = new int[]{2,3,4,5,6,7,8,1};
-        System.out.println(Arrays.toString(cockTailSort(array)));
+        int[] arr = new int[10];
+        for (int i = arr.length; i > 0; i--) {
+            arr[arr.length - i] = i;
+        }
+        System.out.println(Arrays.toString(arr));
+        int[] newArr = bubbleSort(arr);
+        System.out.println(Arrays.toString(newArr));
 
+        cockTailSort(arr);
     }
 
     private static int[] bubbleSort(int[] arr) {
@@ -22,50 +24,46 @@ public class SortMain {
         for (int i = 0; i < arr.length; i++) {
             boolean isSorted = true;
             for (int j = 0; j < sortBorder; j++) {
-                int temp = 0;
                 if (arr[j] > arr[j + 1]) {
-                    temp = arr[j];
+                    int temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
-                    isSorted = false;
                     lastExchangeIndex = j;
+                    isSorted = false;
                 }
+
             }
             sortBorder = lastExchangeIndex;
-            if (isSorted) break;
+            if(isSorted) break;
         }
         return arr;
     }
 
-
-    private static int[] cockTailSort(int[] arr) {
+    private static void cockTailSort(int[] arr) {
         int temp = 0;
-        //奇数轮，从前往后
         for (int i = 0; i < arr.length / 2; i++) {
             boolean isSorted = true;
-            for (int j = i; j < arr.length - i - 1; j++) {
+            for (int j = 0; j < arr.length - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
                     temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
                     isSorted = false;
                 }
+                if(isSorted) break;
             }
-            if (isSorted) break;
 
-            //偶数轮之前，重新设置是否有序
             isSorted = true;
-            //偶数论，从后往前
             for (int j = arr.length - i - 1; j > i; j--) {
-                if (arr[j] < arr[j - 1]) {
+                if (arr[j-1] > arr[j]) {
                     temp = arr[j];
                     arr[j] = arr[j - 1];
                     arr[j - 1] = temp;
                     isSorted = false;
                 }
+                if(isSorted) break;
             }
-            if(isSorted) break;
         }
-        return arr;
+        System.out.println(Arrays.toString(arr));
     }
 }
