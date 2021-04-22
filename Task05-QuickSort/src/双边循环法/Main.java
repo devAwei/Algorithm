@@ -9,28 +9,24 @@ import java.util.Arrays;
  **/
 public class Main {
     public static void main(String[] args) {
-        int[] arr = new int[10];
-        for (int i = 10; i > 0; i--) {
-            arr[arr.length - i] = i;
-        }
+        int[] arr = {4, 7, 3, 5, 6, 2, 8, 1};
+        quickSort(arr, 0, arr.length - 1);
         System.out.println(Arrays.toString(arr));
-        int start = 0, end = arr.length-1;
-        quickSort(arr, start, end);
-        System.out.println(Arrays.toString(arr));
+
     }
 
-    private static void quickSort(int[] arr, int start, int end) {
-        if (start > end) {
+    private static void quickSort(int[] arr, int startIndex, int endIndex) {
+        if (startIndex >= endIndex) {
             return;
         }
-        int pivot = patition(arr, start, end);
-        quickSort(arr, start, pivot - 1);
-        quickSort(arr, pivot + 1, end);
+        int pivot = patition(arr, startIndex, endIndex);
+        quickSort(arr, startIndex, pivot - 1);
+        quickSort(arr, pivot + 1, endIndex);
     }
 
-    private static int patition(int[] arr, int start, int end) {
-        int left = start, right = end;
-        int pivot = arr[start];
+    private static int patition(int[] arr, int startIndex, int endIndex) {
+        int left = startIndex, right = endIndex;
+        int pivot = arr[startIndex];
         while (left != right) {
             while (left < right && arr[right] > pivot) {
                 right--;
@@ -44,8 +40,9 @@ public class Main {
                 swap(arr, left, right);
             }
         }
-        swap(arr,start,left);
+        swap(arr, left, startIndex);
         return left;
+
     }
 
     private static void swap(int[] arr, int left, int right) {
