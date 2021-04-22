@@ -32,6 +32,7 @@ public class LinkList<T> {
         return temp;
     }
 
+
     /**
     * @Description: 链表插入元素
     * @Param: [data, index]
