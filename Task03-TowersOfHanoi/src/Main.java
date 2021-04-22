@@ -9,6 +9,13 @@ public class Main {
         System.out.println("第" + (++m) + "次移动：" + "把" + disks + "号圆盘从" + N + "-》移动到-》" + M);
     }
 
+    /**
+     * 递归函数
+     * @param disks
+     * @param A
+     * @param B
+     * @param C
+     */
     public static void hanoi(int disks, char A, char B, char C) {
         if (disks == 1) {
             move(1, A, C);
