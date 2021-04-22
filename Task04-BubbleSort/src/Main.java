@@ -14,7 +14,6 @@ public class Main {
         System.out.println(Arrays.toString(arr));
         int[] newArr = bubbleSort(arr);
         System.out.println(Arrays.toString(newArr));
-
         cockTailSort(arr);
     }
 
