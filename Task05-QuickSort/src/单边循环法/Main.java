@@ -36,8 +36,7 @@ public class Main {
                 swap(arr, i, mark);
             }
         }
-        arr[start] = arr[mark];
-        arr[mark] = pivot;
+        swap(arr, start, mark);
         return mark;
     }
 

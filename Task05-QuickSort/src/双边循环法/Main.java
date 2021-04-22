@@ -17,11 +17,10 @@ public class Main {
         int start = 0, end = arr.length-1;
         quickSort(arr, start, end);
         System.out.println(Arrays.toString(arr));
-
     }
 
     private static void quickSort(int[] arr, int start, int end) {
-        if (start >= end) {
+        if (start > end) {
             return;
         }
         int pivot = patition(arr, start, end);
@@ -36,15 +35,16 @@ public class Main {
             while (left < right && arr[right] > pivot) {
                 right--;
             }
+
             while (left < right && arr[left] <= pivot) {
                 left++;
             }
+
             if (left < right) {
                 swap(arr, left, right);
             }
         }
-        arr[start] = arr[left];
-        arr[left] = pivot;
+        swap(arr,start,left);
         return left;
     }
 
