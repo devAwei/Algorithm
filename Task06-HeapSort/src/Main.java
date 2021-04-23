@@ -10,11 +10,10 @@ public class Main {
         int[] arr = {1, 3, 2, 6, 5, 7, 8, 9, 10};
         heapSort(arr);
         System.out.println(Arrays.toString(arr));
-
     }
 
     private static void heapSort(int[] arr) {
-        // build heap
+        // build heap,from the lasted leaf node
         for (int i = (arr.length - 2) / 2; i >= 0; i--) {
             downAdjust(arr, i, arr.length);
         }
