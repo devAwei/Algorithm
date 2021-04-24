@@ -15,7 +15,6 @@ public class Main {
         TreeNode<Integer> treeNode = binaryTree.createBinaryTree(inputList);
         System.out.println("=====中序遍历=====");
         binaryTree.inOrderTraveral(treeNode);
-
         System.out.println("\n=====广度优先遍历=====");
         binaryTree.levelOrderTraversal(treeNode);
     }

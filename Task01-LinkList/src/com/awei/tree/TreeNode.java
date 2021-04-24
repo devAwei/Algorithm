@@ -13,4 +13,5 @@ public class TreeNode<T> {
     public TreeNode(T data) {
         this.data = data;
     }
+
 }

@@ -31,7 +31,6 @@ public class BinaryTree<T> {
         return node;
     }
 
-
     //中序遍历
     public void inOrderTraveral(TreeNode<T> node) {
         if (null == node) {
