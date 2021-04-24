@@ -8,6 +8,7 @@ package com.awei.linklist;
 public class Main {
     public static void main(String[] args) {
         //链表
+
         LinkList<String> linkList = new LinkList<>();
         String[] strs = new String[10];
 
