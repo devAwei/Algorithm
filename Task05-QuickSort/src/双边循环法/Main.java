@@ -1,5 +1,6 @@
 package 双边循环法;
 
+import java.lang.reflect.Field;
 import java.util.Arrays;
 
 /**
@@ -25,8 +26,7 @@ public class Main {
     }
 
     private static int patition(int[] arr, int startIndex, int endIndex) {
-        int left = startIndex, right = endIndex;
-        int pivot = arr[startIndex];
+        int left = startIndex, right = endIndex, pivot = arr[startIndex];
         while (left != right) {
             while (left < right && arr[right] > pivot) {
                 right--;
@@ -40,9 +40,8 @@ public class Main {
                 swap(arr, left, right);
             }
         }
-        swap(arr, left, startIndex);
+        swap(arr, startIndex, left);
         return left;
-
     }
 
     private static void swap(int[] arr, int left, int right) {
