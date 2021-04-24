@@ -17,7 +17,6 @@ public class Main {
         int start = 0, end = arr.length-1;
         quickSort(arr, start, end);
         System.out.println(Arrays.toString(arr));
-
     }
 
     private static void quickSort(int[] arr, int start, int end) {
