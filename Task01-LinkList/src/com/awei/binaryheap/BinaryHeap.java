@@ -7,6 +7,7 @@ package com.awei.binaryheap;
  **/
 public class BinaryHeap {
 
+
     /**
      * 上浮  插入一个结点
      * @param array
