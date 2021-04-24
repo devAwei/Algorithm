@@ -12,6 +12,7 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             queue.enQueue(arr[i]);
         }
+
         System.out.println(queue.deQueue());
         System.out.println(queue.deQueue());
         System.out.println(queue.deQueue());

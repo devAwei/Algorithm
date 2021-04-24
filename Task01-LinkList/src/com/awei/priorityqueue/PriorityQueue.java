@@ -59,6 +59,7 @@ public class PriorityQueue {
         return head;
     }
 
+
     private void downAdjust() {
         int parrent = 0;
         int child = parrent * 2 + 1;
