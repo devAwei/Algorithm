@@ -23,6 +23,7 @@ public class Main {
                 max = arr[i];
             }
         }
+
         //遍历数列，填充统计数组
         int[] countArray = new int[max - min + 1];
         for (int i = 0; i < arr.length; i++) {
