@@ -7,7 +7,7 @@ import java.util.Stack;
  **/
 public class Main {
     public static void main(String[] args) {
-        String brackets = "({{{{}}}))";
+        String brackets = "[}";
         System.out.println(isValidBracket(brackets));
     }
 
@@ -18,7 +18,6 @@ public class Main {
             return true;
         // bracket must not be "" or null
         int index = 0;
-
         while (isMached && index < brackets.length()) {
             char ch = brackets.charAt(index++);
             if (ch == '(' || ch == '{' || ch == '[')
@@ -30,7 +29,7 @@ public class Main {
                 isMached = (pop + 1 == ch || pop + 2 == ch);
             }
         }
-        return !stack.isEmpty() ? false :isMached ;
+        return stack.isEmpty()&&isMached;
     }
 
 }
