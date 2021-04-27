@@ -11,6 +11,7 @@ public class Main {
         System.out.println(isValidBracket(brackets));
     }
 
+
     /**
      * 是否有效括号  方法
      * @param brackets
