@@ -28,6 +28,7 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             countArray[arr[i] - min]++;
         }
+
         //遍历统计数组，输出结果
         int[] sortedArray = new int[arr.length];
         int index = 0;
