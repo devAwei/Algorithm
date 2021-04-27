@@ -39,6 +39,12 @@ public class Main {
         return mark;
     }
 
+    /**
+     * 数组 交换 left right 下标的 值
+     * @param arr
+     * @param left
+     * @param right
+     */
     private static void swap(int[] arr, int left, int right) {
         int temp = arr[left];
         arr[left] = arr[right];
