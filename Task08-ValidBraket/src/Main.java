@@ -11,6 +11,11 @@ public class Main {
         System.out.println(isValidBracket(brackets));
     }
 
+    /**
+     * 是否有效括号  方法
+     * @param brackets
+     * @return
+     */
     private static boolean isValidBracket(String brackets) {
         boolean isMached = true;
         Stack<Character> stack = new Stack<>();
