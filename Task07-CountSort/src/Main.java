@@ -10,7 +10,6 @@ public class Main {
         int[] arr = {95, 94, 91, 98, 99,84,89, 90, 99, 93, 91, 92};
         int[] arrResult = countSort(arr);
         System.out.println(Arrays.toString(arrResult));
-
     }
 
     private static int[] countSort(int[] arr) {
