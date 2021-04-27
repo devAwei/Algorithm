@@ -14,7 +14,7 @@ public class Main {
     private static boolean isValidBracket(String brackets) {
         boolean isMached = true;
         Stack<Character> stack = new Stack<>();
-        if(null==brackets||"".equals(brackets))
+        if (null == brackets || "".equals(brackets))
             return true;
         // bracket must not be "" or null
         int index = 0;
@@ -29,7 +29,7 @@ public class Main {
                 isMached = (pop + 1 == ch || pop + 2 == ch);
             }
         }
-        return stack.isEmpty()&&isMached;
+        return stack.isEmpty() && isMached;
     }
 
 }
