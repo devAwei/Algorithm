@@ -33,7 +33,7 @@ public class Main {
         for (int i = 0; i < arr.length; i++) {
             countArr[arr[i] - min]++;
         }
-        //计数数组变形 加上之前的总和
+        //统计数组变形 加上之前的总和
         for (int i = 1; i < countArr.length; i++) {
             countArr[i] += countArr[i - 1];
         }
@@ -53,3 +53,12 @@ public class Main {
         return sortedArr;
     }
 }
+
+/**
+ * 计数排序： 代码最开始都涉及到遍历原始数列，运算量都是n ，第三部遍历统计数列，运算量是m；时间复杂度为 O（n+m）
+ *          不考虑结果数组，只考虑统计数组大小，空间复杂度是 O(m)
+ * 计数排序局限性：
+ *      1. 当 d=max - min 过大时，并不适合用计数排序，造成空间的浪费。
+ *      2. 计数排序不适合用于小数
+ *
+ */
