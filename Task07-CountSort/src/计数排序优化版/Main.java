@@ -28,7 +28,28 @@ public class Main {
             if(arr[i]<min)
                 min = arr[i];
         }
-
-        return null;
+        int d = max - min;
+        int[] countArr = new int[d + 1];
+        for (int i = 0; i < arr.length; i++) {
+            countArr[arr[i] - min]++;
+        }
+        //计数数组变形 加上之前的总和
+        for (int i = 1; i < countArr.length; i++) {
+            countArr[i] += countArr[i - 1];
+        }
+        // arr数组：  90 99 95 94 95
+        // count原型： 1 0 0 0 1 2 0 0 0 1 长度为10
+        // count变形： 1 1 1 1 2 4 4 4 4 5
+        int[] sortedArr = new int[arr.length];
+        for (int i = arr.length - 1; i >= 0; i--) {
+            //从arr 待排序数组的最后一个元素开始遍历，arr[i]-min 为统计数组的索引位置，
+            // 在countArr中，下标为 arr[i]-min 表示arr[i] 在 sortedArr中的位置，为第countArr[arr[i]-min]个
+            // 在sortedArr中，第 countArr[arr[i]-min]个元素的索引值为： countArr[arr[i]-min]-1
+            //  故 sortedArr[countArr[arr[i]-min]-1] =arr[i]
+            sortedArr[countArr[arr[i] - min] - 1] = arr[i];
+            // 使 下次在遍历到该元素时，他的序号-1
+            countArr[arr[i] - min]--;
+        }
+        return sortedArr;
     }
 }
