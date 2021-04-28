@@ -49,3 +49,9 @@ public class Main {
         arr[right] = temp;
     }
 }
+/*
+* 快速排序： 平均复杂度为 O(nlogn) ,最坏的时间复杂度为 O(n 平方)
+*       属于不稳定排序
+*       平均空间复杂度为 O(logn)
+*
+*/
