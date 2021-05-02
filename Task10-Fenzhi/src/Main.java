@@ -18,6 +18,8 @@ public class Main {
     public static int fun(int a,int n) {
         if(n==0) return 1;
         if(n==1) return a;
-        return n % 2 == 0 ? fun(a, n / 2) * fun(a, n / 2) : fun(a, (n - 1) / 2) * fun(a, (n - 1) / 2 + 1);
+        return n % 2 == 0 ?
+                fun(a, n / 2) * fun(a, n / 2) :
+                fun(a, (n - 1) / 2) * fun(a, (n - 1) / 2 + 1);
     }
 }
