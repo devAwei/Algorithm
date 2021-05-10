@@ -59,6 +59,16 @@ public class BinaryTree<T> {
             }
         }
         System.out.println();
+    }
 
+    public TreeNode<T> createBinaryTreeByArray(T[] arr, int index) {
+        TreeNode<T> tn = null;
+        if (index < arr.length&&null!=arr[index]) {
+            tn = new TreeNode<>(arr[index]);
+            tn.leftChild = createBinaryTreeByArray(arr, index * 2 + 1);
+            tn.rigthChild = createBinaryTreeByArray(arr, index * 2 + 2);
+            return tn;
+        }
+        return tn;
     }
 }

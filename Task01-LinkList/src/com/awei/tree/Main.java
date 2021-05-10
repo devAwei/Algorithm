@@ -11,8 +11,10 @@ import java.util.LinkedList;
 public class Main {
     public static void main(String[] args) {
         BinaryTree<Integer> binaryTree = new BinaryTree<>();
-        LinkedList<Integer> inputList = new LinkedList<Integer>(Arrays.   asList(new Integer[]{3,2,9,null,null,10,null,   null,8,null,4}));
+        LinkedList<Integer> inputList = new LinkedList<Integer>(Arrays.asList(new Integer[]{3, 2, 9, null, null, 10, null, null, 8, null, 4}));
         TreeNode<Integer> treeNode = binaryTree.createBinaryTree(inputList);
+        // 数组初始化 bug
+        treeNode = binaryTree.createBinaryTreeByArray(new Integer[]{3, 2, 9, null, null, 10, null, null, 8, null, 4}, 0);
         System.out.println("=====中序遍历=====");
         binaryTree.inOrderTraveral(treeNode);
         System.out.println("\n=====广度优先遍历=====");
