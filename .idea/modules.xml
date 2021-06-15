@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Task01-LinkList/Task01-LinkList.iml" filepath="$PROJECT_DIR$/Task01-LinkList/Task01-LinkList.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task02-pqlTest/Task02-pqlTest.iml" filepath="$PROJECT_DIR$/Task02-pqlTest/Task02-pqlTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task03-TowersOfHanoi/Task03-TowersOfHanoi.iml" filepath="$PROJECT_DIR$/Task03-TowersOfHanoi/Task03-TowersOfHanoi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task04-BubbleSort/Task04-BubbleSort.iml" filepath="$PROJECT_DIR$/Task04-BubbleSort/Task04-BubbleSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task05-QuickSort/Task05-QuickSort.iml" filepath="$PROJECT_DIR$/Task05-QuickSort/Task05-QuickSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task06-HeapSort/Task06-HeapSort.iml" filepath="$PROJECT_DIR$/Task06-HeapSort/Task06-HeapSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task07-CountSort/Task07-CountSort.iml" filepath="$PROJECT_DIR$/Task07-CountSort/Task07-CountSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task08-ValidBraket/Task08-ValidBraket.iml" filepath="$PROJECT_DIR$/Task08-ValidBraket/Task08-ValidBraket.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task09-FibonacciSequence/Task09-FibonacciSequence.iml" filepath="$PROJECT_DIR$/Task09-FibonacciSequence/Task09-FibonacciSequence.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task10-Fenzhi/Task10-Fenzhi.iml" filepath="$PROJECT_DIR$/Task10-Fenzhi/Task10-Fenzhi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task11-BinarySearch/Task11-BinarySearch.iml" filepath="$PROJECT_DIR$/Task11-BinarySearch/Task11-BinarySearch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task12-FenzhiSort/Task12-FenzhiSort.iml" filepath="$PROJECT_DIR$/Task12-FenzhiSort/Task12-FenzhiSort.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task13-SparseArray/Task13-SparseArray.iml" filepath="$PROJECT_DIR$/Task13-SparseArray/Task13-SparseArray.iml" />
+    </modules>
+  </component>
+</project>
